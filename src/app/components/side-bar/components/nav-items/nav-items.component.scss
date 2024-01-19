@@ -6,15 +6,12 @@
     .navItem {
         display: flex;
 
-        .icon {
-            width: 1.25rem;
-            height: 1.25rem;
-            border: 2px solid var(--accent);
+        mat-icon {
+            color: var(--gray);
             margin-right: 1.50rem;
-            
 
             &.active {
-                border-color: var(--primary-dark);
+                color: var(--primary-dark);
             }
         }
 
