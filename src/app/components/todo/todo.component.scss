@@ -40,11 +40,12 @@
             color: var(--accent);
         }
 
-        .icon{
-            width: 1em;
-            height: 1em;
-            border-radius: 100%;
-            border: 2px solid var(--gray);
+        mat-icon{
+            color: var(--gray);
+
+            &.checked{
+                color: var(--primary);
+            }
         }
     }
 }

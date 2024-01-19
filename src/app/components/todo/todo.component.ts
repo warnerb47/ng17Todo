@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-todo',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss'
 })

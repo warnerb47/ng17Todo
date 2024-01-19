@@ -60,10 +60,8 @@
         &>*+* {
             margin-left: 0.50rem;
         }
-        .icon {
-            width: 1rem;
-            height: 1rem;
-            border: 2px solid var(--primary);
+        mat-icon{
+            color: var(--primary);
         }
     }
 }
