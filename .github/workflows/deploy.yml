@@ -1,0 +1,47 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH keys
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build app
+        run: npm run build
+
+      - name: archive dist
+        run: tar -czvf dist.gz ./dist/fuse/*
+
+      - name: Send artefact to server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+            host: ${{ vars.HOST }}
+            username: ${{ vars.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            port: ${{ vars.PORT }}
+            source: "dist.gz"
+            target: C:\
+
+      - name: unarchive artefact on remote server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+            host: ${{ vars.HOST }}
+            username: ${{ vars.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            port: ${{ vars.PORT }}
+            script: tar -xvzf C:\dist.gz -C C:\app
