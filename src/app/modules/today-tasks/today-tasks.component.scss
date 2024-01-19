@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 6rem;
+
+    .header {
+        .comment {
+            color: var(--bg-card);
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            font-weight: 500;
+        }
+        .title {
+            color: var(--bg-card);
+            font-weight: 600;
+            font-size: 1.875rem; /* 30px */
+            line-height: 2.25rem; /* 36px */
+        }
+    }
+}
