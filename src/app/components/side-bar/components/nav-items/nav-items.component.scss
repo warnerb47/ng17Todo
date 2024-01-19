@@ -9,8 +9,13 @@
         .icon {
             width: 1.25rem;
             height: 1.25rem;
-            border: 1px solid var(--primary-dark);
+            border: 2px solid var(--accent);
             margin-right: 1.50rem;
+            
+
+            &.active {
+                border-color: var(--primary-dark);
+            }
         }
 
         .label {
@@ -24,6 +29,8 @@
             .title {
                 color: var(--accent);
                 margin-bottom: 1.50rem;
+                cursor: pointer;
+                text-decoration: none;
             }
 
             .subItem {
