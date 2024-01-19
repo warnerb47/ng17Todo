@@ -1,0 +1,50 @@
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    width: 35rem;
+    padding: 0.75rem;
+
+    .start {
+        display: flex;
+        align-items: center;
+        &>*+* {
+            margin-left: 0.50rem;
+        }
+
+        .icon{
+            width: 0.70rem;
+            height: 0.70rem;
+            border-radius: 100%;
+            background-color: var(--danger);
+        }
+
+        .title {
+            font-size: 1rem; /* 16px */
+            line-height: 1.5rem; /* 24px */
+            color: var(--accent);
+        }
+    }
+    .end {
+        display: flex;
+        align-items: center;
+        &>*+* {
+            margin-left: 0.50rem;
+        }
+
+        .date{
+            font-size: 1rem; /* 16px */
+            line-height: 1.5rem; /* 24px */
+            color: var(--accent);
+        }
+
+        .icon{
+            width: 1em;
+            height: 1em;
+            border-radius: 100%;
+            border: 2px solid var(--gray);
+        }
+    }
+}

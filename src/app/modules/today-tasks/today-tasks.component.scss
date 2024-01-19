@@ -4,6 +4,7 @@ main {
     padding: 3rem 6rem;
 
     .header {
+        margin-bottom: 3rem;
         .comment {
             color: var(--bg-card);
             font-size: 1.25rem; /* 20px */
@@ -15,6 +16,19 @@ main {
             font-weight: 600;
             font-size: 1.875rem; /* 30px */
             line-height: 2.25rem; /* 36px */
+        }
+    }
+
+    app-todo-input{
+        margin-bottom: 3rem;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        
+        app-todo {
+            margin-bottom: 1rem;
         }
     }
 }
