@@ -1,0 +1,51 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    height: 85%;
+    padding-left: 2rem;
+    overflow-y: scroll;
+    direction: rtl;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb  {
+        background-color: var(--primary);
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #cfcfcf;
+        border: 2px solid transparent;
+        background-clip: content-box;
+     }
+    &>*+* {
+        margin-bottom: 2rem;
+    }
+
+    .task-group {
+        display: flex;
+        flex-direction: column;
+        direction: ltr;
+
+        .title {
+            color: var(--bg-card);
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            
+            app-todo {
+                margin-bottom: 1rem;
+            }
+        }
+    
+    }
+}
