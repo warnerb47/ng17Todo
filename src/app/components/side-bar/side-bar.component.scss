@@ -4,6 +4,14 @@ nav {
     flex-direction: column;
 
     & >*+* {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    hr {
+        height: 0.10rem;
+        background-color: var(--primary-dark);
+        width: 70%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
