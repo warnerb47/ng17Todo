@@ -20,10 +20,8 @@ main {
             padding-bottom: 0.75rem;
             border-bottom: 1px solid var(--primary);
             
-            .icon {
-                width: 0.75rem;
-                height: 0.75rem;
-                border: 1px solid var(--primary);
+            mat-icon{
+                color: var(--primary);
                 margin-right: 0.25rem;
             }
             .section-title {
@@ -53,12 +51,14 @@ main {
                     color: var(--accent);
                 }
 
-                .icon {
-                    width: 0.5rem;
-                    height: 0.5rem;
-                    border: 1px solid var(--accent);
+                mat-icon{
+                    color: var(--gray);
+                    font-size: 1.60rem;
+                    
+                    &.checked {
+                        color: var(--primary);
+                    }
                 }
-
             }
         }
     }
