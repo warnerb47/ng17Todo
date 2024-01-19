@@ -1,9 +1,10 @@
 main {
     display: flex;
     flex-direction: column;
-    padding-top: 3rem;
-    height: 85%;
+    height: 90%;
     padding-left: 2rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
     overflow-y: scroll;
     direction: rtl;
 
@@ -17,17 +18,21 @@ main {
     }
     &::-webkit-scrollbar-track {
         background: #cfcfcf;
-        border: 2px solid transparent;
+        border: 3px solid transparent;
         background-clip: content-box;
      }
     &>*+* {
-        margin-bottom: 2rem;
+        margin-top: 3rem;
     }
 
     .task-group {
         display: flex;
         flex-direction: column;
         direction: ltr;
+
+        &:last-child {
+            margin-bottom: 3rem;
+        }
 
         .title {
             color: var(--bg-card);
