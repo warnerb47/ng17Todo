@@ -1,0 +1,30 @@
+.user {
+    display: flex;
+    align-items: center;
+
+    .img {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 100%;
+        margin-right: 0.50rem;
+        background-color: var(--primary);
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+
+        .comment {
+            font-weight: 500;
+            font-size: 1rem; /* 16px */
+            color: var(--accent);
+        }
+        
+        .title {
+            font-weight: 500;
+            font-size: 1.25rem; /* 20px */
+            color: var(--primary);
+        }
+        
+    }
+}
